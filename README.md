@@ -1,10 +1,10 @@
 # dns-transfer
 
-An utility to check zone transfer for domains.
+Check DNS zone transfers in an easy way.
 
 ## Usage
 
-It only requires a domain to being given:
+It only requires you to provide a domain:
 
 ```shell
 $ dns-transfer internal.zonetransfer.me
@@ -28,7 +28,6 @@ mail.internal.zonetransfer.me. IN A 10.1.1.3
 pip3 install git+https://github.com/zer1t0/dns-transfer.git
 ```
 
-
 ## More cases
 
 Getting a JSON output:
@@ -36,13 +35,17 @@ Getting a JSON output:
 dns-transfer -j <domain>
 ```
 
-Check parent domains:
+Check zone transfer for parent domains too:
 ```shell
 dns-transfer -p dc.internal.zonetransfer.me
 ```
 
-This will check:
+This will check zone transfer for:
 - dc.internal.zonetransfer.me
 - internal.zonetransfer.me
 - zonetransfer.me
 
+
+## Acknowledgement
+
+Thanks to [@digininja](https://twitter.com/digininja) for zonetransfer.me (an easy way to test zone transfers)
