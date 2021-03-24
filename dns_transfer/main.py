@@ -97,6 +97,13 @@ def get_zone(domain):
                 ns,
                 domain,
             )
+        except ConnectionError as e:
+            logger.warning(
+                "Connection error in %s for %s: %s",
+                ns,
+                domain,
+                e
+            )
 
 
 def get_nameservers(domain):
